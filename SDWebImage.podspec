@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'SDWebImage'
-  s.version = '3.8.2'
+  s.version = '3.9.0'
   s.ios.deployment_target = '7.0'
   s.tvos.deployment_target = '9.0'
   s.license = 'MIT'
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.framework = 'ImageIO'
-  
+
   s.default_subspec = 'Core'
 
   s.subspec 'Core' do |core|
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'WebP' do |webp|
     webp.source_files = 'SDWebImage/UIImage+WebP.{h,m}'
-    webp.xcconfig = { 
+    webp.xcconfig = {
       'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) SD_WEBP=1',
       'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
     }
